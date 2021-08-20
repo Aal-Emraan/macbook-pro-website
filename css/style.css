@@ -1,0 +1,16 @@
+.btn{
+    border:2px solid rgb(185, 185, 185);
+}
+
+.btn:hover{
+    background: black;
+    color: white
+}
+
+p, .btn, h6 {
+    color:rgb(78, 78, 78);
+}
+
+td{
+    font-weight: bold;
+}
