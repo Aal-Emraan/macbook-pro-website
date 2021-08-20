@@ -1,6 +1,15 @@
 /*============================================
-              total price
+              All Functions
 =============================================*/
+
+function initialValue(id){
+    document.getElementById(id).innerText = 0;
+    
+}
+
+function extraPrice(id,price){
+    document.getElementById(id).innerText = price;
+}
 
 function totalPrice(){
     const memoryPrice = parseInt(document.getElementById('memory-price').innerText);
@@ -14,13 +23,8 @@ function totalPrice(){
 }
 
 /*=============================================
-               initial price set
+               set initial price
 ============================================== */
-
-function initialValue(id){
-    document.getElementById(id).innerText = 0;
-    
-}
 
 document.getElementById('memory-button1').addEventListener('click', function(){
     initialValue('memory-price');
@@ -38,10 +42,6 @@ document.getElementById('delivery-button1').addEventListener('click', function()
 /*=============================================
                extra charges adding
 ============================================== */
-
-function extraPrice(id,price){
-    document.getElementById(id).innerText = price;
-}
 
 document.getElementById('memory-button2').addEventListener('click', function(){
     extraPrice('memory-price','180');
@@ -72,6 +72,12 @@ document.getElementById('apply-button').addEventListener('click',function(){
         const totalCostWithPromoCode = (totalPrice/100) * 80;
         const totalCostSort = totalCostWithPromoCode.toFixed(2);
         totalCost.innerText = totalCostSort;
+    }else{
+        window.alert('wrong promo code.')
     }
     document.getElementById('promo-code').value = '';
 })
+
+/*===============================================
+                    THE END
+===============================================*/
