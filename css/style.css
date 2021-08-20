@@ -14,3 +14,7 @@ p, .btn, h6 {
 td{
     font-weight: bold;
 }
+
+#apply-button:focus{
+    box-shadow: none;
+}
